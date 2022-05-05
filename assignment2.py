@@ -4,7 +4,6 @@ instructors = ['Adriana', 'Adriana', 'Alan', 'Alan', 'Alan', 'Alan', 'Alan', 'Br
 
 def find_name(names, target_name):
     output = []
-
     def search_for_name(index):
 
         if index >= len(names):
@@ -27,9 +26,8 @@ def find_name(names, target_name):
 print(find_name(instructors, 'Braus'))
 
 # problem 2
-
-keys = "34"
 result = []
+keys = "23456789"
 digits = {"2": "abc",
           "3": "def",
           "4": "ghi",
@@ -41,11 +39,11 @@ digits = {"2": "abc",
 
 
 def letter_combonations(index, currentString):
-    if len(currentString) == len(keys):
+    if len(currentString) == len(digits):
         result.append(currentString)
         return
 
-    for char in digits[keys[index]]:
+    for char in digits[currentString[index]]:
         print(char)
         letter_combonations(index + 1, currentString + char)
 
