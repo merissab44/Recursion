@@ -12,6 +12,8 @@ def find_name(names, target_name):
 
         elif names[index] == target_name and len(output) == 0:
             output.append(index)
+            if names[index + 1] != target_name:
+                return output
 
         elif names[index] != target_name and len(output) == 1:
             output.append(index - 1)
@@ -25,6 +27,7 @@ def find_name(names, target_name):
 print(find_name(instructors, 'Braus'))
 
 # problem 2
+
 keys = "34"
 result = []
 digits = {"2": "abc",
