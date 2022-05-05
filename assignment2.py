@@ -23,3 +23,29 @@ def find_name(names, target_name):
     return output
 
 print(find_name(instructors, 'Braus'))
+
+# problem 2
+keys = "34"
+result = []
+digits = {"2": "abc",
+          "3": "def",
+          "4": "ghi",
+          "5": "jkl",
+          "6": "mno",
+          "7": "qprs",
+          "8": "tuv",
+          "9": "wxyz", }
+
+
+def letter_combonations(index, currentString):
+    if len(currentString) == len(keys):
+        result.append(currentString)
+        return
+
+    for char in digits[keys[index]]:
+        print(char)
+        letter_combonations(index + 1, currentString + char)
+
+
+letter_combonations(0, "")
+print(result)
