@@ -17,8 +17,7 @@ def find_name(names, target_name):
         elif names[index] != target_name and len(output) == 1:
             output.append(index - 1)
 
-        index += 1
-        search_for_name(index)
+        search_for_name(index + 1)
 
     search_for_name(0)
     return output
@@ -27,7 +26,6 @@ print(find_name(instructors, 'Braus'))
 
 # problem 2
 result = []
-keys = "23456789"
 digits = {"2": "abc",
           "3": "def",
           "4": "ghi",
@@ -48,5 +46,5 @@ def letter_combonations(index, currentString):
         letter_combonations(index + 1, currentString + char)
 
 
-letter_combonations(0, "")
+letter_combonations(0, "34")
 print(result)
